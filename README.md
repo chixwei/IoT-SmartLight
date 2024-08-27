@@ -43,3 +43,7 @@ Manual Mode: Allows manual control of the streetlight, including turning it on/o
 
 7. Auto Mode: Change the system to auto mode through MQTT commands for automatic operation.
 
+![SmartLight Website](https://github.com/user-attachments/assets/bbe319c7-4006-4ff7-929f-3f7d7dfac2de)
+
+![SmartLight Prototype](https://github.com/user-attachments/assets/35d9e018-9792-4ace-aa24-89e4bc9ff77b)
+
