@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: 80px auto; /* Adjust the sidebar width */
+    grid-template-rows: 100vh; /* Full viewport height */
+    grid-template-areas: "sidebar main";
+    overflow: hidden; /* Hide overflowing content */
+}
+
+
+.main-content {
+    position: relative;
+    background-color: rgb(235, 235, 235);
+    transition: all 0.5s ease;
+    grid-area: main;
+    padding: .4rem .8rem;
+    overflow-y: auto;
+    overflow-x: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    display: block;
+
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: 80px auto; /* Adjust the sidebar width */
+    grid-template-rows: 100vh; /* Full viewport height */
+    grid-template-areas: "sidebar main";
+    overflow: hidden; /* Hide overflowing content */
+}
+
+
+/* Style for notification cards */
+.notification-card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+
+.notification-card img {
+    max-width: 50px; /* Adjust image size as needed */
+    vertical-align: middle;
+    margin-right: 10px;
+}

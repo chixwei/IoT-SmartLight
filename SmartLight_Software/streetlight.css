@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: 80px auto; /* Adjust the sidebar width */
+    grid-template-rows: 100vh; /* Full viewport height */
+    grid-template-areas: "sidebar main";
+    overflow: hidden; /* Hide overflowing content */
+}
+
+
+.main-content {
+    position: relative;
+    background-color: rgb(235, 235, 235);
+    transition: all 0.5s ease;
+    grid-area: main;
+    padding: .4rem .8rem;
+    overflow-y: auto;
+    overflow-x: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    width: 400px;
+    height: 350px;
+    position: relative;
+    background-color: white;
+    margin-left: 5%;
+    margin-top: 5%;
+
+}
+  
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    margin-left: 40px;
+    color: #204873;
+    font-size: medium;
+}
+
+.card .manual-auto {
+    width: 20%;
+    height: 8%;
+    border-radius: 15px;
+    font-weight: 500;
+}
+
+.card-header h3 {
+    text-align: center;
+    width: 100%;
+    padding-bottom: 10px;
+
+}
+
+.arrow {
+    text-decoration: none;
+    color: rgb(64, 64, 64);
+    font-weight: 700;
+    font-size: 25px;
+    padding-bottom: 10px;
+
+}
+
+.card-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    overflow: auto; /* Add scrollbars when content overflows */
+    max-height: 300px; /* Limit maximum height to avoid excessive scrolling */
+}
+
+/* Responsive styles for smaller screens */
+@media screen and (max-width: 100px) {
+    .card {
+        width: 100%; /* Make the card full-width on smaller screens */
+    }
+    /* Add more responsive styles as needed */
+}
+
+
+.left-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 40%;
+}
+
+.left-section img {
+    width: 100%;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ff0000;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #23fa52;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #23fa52;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.right-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+
+input[type="range"] {
+    width: 100%;
+}
+
+.brightness-section {
+    width: 100%;
+    font-weight: 500;
+}
+
+.brightness-slider {
+    width: 100%;
+    margin-bottom: 20%;
+}
+
+.info-boxes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+    width: 100%;
+    position: relative;
+    overflow: hidden; /* Hide overflowing lines */
+}
+
+.info-boxes::before,
+.info-boxes::after {
+    content: "";
+    position: absolute;
+    background-color: #ccc;
+}
+
+.info-boxes::before {
+    width: 1px; /* Vertical line */
+    height: 100%;
+    left: 50%; /* Adjust to your preference */
+    transform: translateX(-50%);
+}
+
+.info-boxes::after {
+    height: 1px; /* Horizontal line */
+    width: 100%;
+    top: 50%; /* Adjust to your preference */
+    transform: translateY(-50%);
+}
+
+.info-box {
+    padding: 8px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    border: none; /* Remove individual box borders */
+}
+
+.info-box .info-text {
+    margin-bottom: 5%;
+    text-align: left;
+    font-weight: 500;
+}
+
+.weather img {
+    display: block;
+    width: 30%;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.luminance-data,
+.status-data,
+.current-data {
+    margin-top: 5%;
+    justify-content: center;
+    width: 100%;
+}
+   

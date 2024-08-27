@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: 80px auto; /* Adjust the sidebar width */
+    grid-template-rows: 100vh; /* Full viewport height */
+    grid-template-areas: "sidebar main";
+    overflow: hidden; /* Hide overflowing content */
+}
+
+.main-content {
+    position: relative;
+    background-color: rgb(235, 235, 235);
+    transition: all 0.5s ease;
+    grid-area: main;
+    padding: .4rem .8rem;
+    overflow-y: auto;
+    overflow-x: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+
+/* Card Styles */
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 0 auto; /* Center the card horizontally */
+    margin-top: 20px;
+    max-width: 1000px; /* Set a maximum width for the card */
+    height: 800px;
+
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+
+.pole-name {
+    font-size: 24px;
+    text-align: center;
+    font-weight: 700;
+    color: #204873;
+    width: 95%;
+}
+
+
+.card-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.left-section button {
+    font-weight: bold;
+    font-size: 15px;
+    color:#204873;
+}
+
+
+.left-section img {
+    max-width: 200px;
+    height: auto;
+    margin-top: 10%;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+
+
+.manual-auto {
+    width: 85%;
+    height: 30px;
+    border-radius: 15px;
+    margin-top: 15%;
+}
+
+/* Status Button Styles */
+.status-button {
+    padding: 5px 10px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    width: 60px;
+
+}
+
+/* Default button styles */
+#status-on {
+    background-color: #cdcdcd;
+}
+
+#status-off {
+    background-color: #cdcdcd;
+}
+
+/* Active button styles for On and Off */
+#status-on.active {
+    background-color: green;
+    color: white;
+}
+
+#status-off.active {
+    background-color: red;
+    color: white;
+}
+
+
+/* Row Styles */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px 0;
+}
+
+
+/* Box Styles */
+.status-box, .id-box, .data-box, .weather, .brightness-section, .address-box, .location-box {
+    flex: 1;
+    padding: 10px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+}
+
+
+label {
+    margin-bottom: 5%;
+    text-align: left;
+    font-weight: bold;
+    color: #204873;
+}
+
+
+span, .status-buttons {
+
+    justify-content: center;
+    width: 100%;
+    font-weight: 500;
+}
+
+#map {
+    height: 270px;
+    width: 100%;
+}
+
+
+/* Slider Styles */
+#brightness {
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+.weather img {
+    display: block;
+    width: 30%;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.back-button img{
+    width: 20px;
+    height: 20px;
+}
