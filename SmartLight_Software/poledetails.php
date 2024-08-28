@@ -144,7 +144,7 @@ if (isset($_GET['poleid'])) {
                             width="700"
                             height="270"
                             frameborder="0" style="border:0"
-                            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBkSt7oJAW5dHIVdLsR73xS_UoFkB1ALKs&q=<?php echo $latitude; ?>,<?php echo $longitude; ?>" allowfullscreen>
+                            src="https://www.google.com/maps/embed/v1/place?key=your_api_key<?php echo $latitude; ?>,<?php echo $longitude; ?>" allowfullscreen>
                         </iframe>
 
                         </div>
